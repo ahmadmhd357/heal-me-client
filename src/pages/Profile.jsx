@@ -4,7 +4,7 @@ import { BsCircle } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import TherapistProfileForm from "../components/TherapistProfileForm";
-import UserProfileForm from "../components/userProfileForm";
+import UserProfileForm from "../components/userProfileForm.jsx";
 import { getUser, selectUser } from "../features/users/usersSlice";
 import newRequest from "../utils/newRequest";
 
