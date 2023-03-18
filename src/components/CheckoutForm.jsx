@@ -66,7 +66,7 @@ function CheckoutForm() {
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: `http://localhost:5173/thankyou/${tickets}`,
+        return_url: `https://heal-me-app.onrender.com/thankyou/${tickets}`,
       },
     });
     if (error.type === "card_error" || error.type === "validation_error") {
