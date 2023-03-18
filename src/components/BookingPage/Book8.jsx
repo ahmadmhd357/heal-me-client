@@ -9,8 +9,8 @@ function Book8({ data,setSteps }) {
   
   const onSubmit = async () => {
     try {
-     await newRequest.put('/users/book',{id:currentUser._id, appointment:data})
-     const res = await newRequest.get('/users/user',{ email:currentUser.email} )
+      const res = await newRequest.put('/users/book',{id:currentUser._id, appointment:data})
+    //  const res = await newRequest.get('/users/user',{ email:currentUser.email} )
      dispatch(getUser(res.data));
      alert('success')
     } catch (error) {
