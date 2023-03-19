@@ -1,8 +1,8 @@
 import React from "react";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
 
 function Requirements() {
-    const navigate = useNavigate()
+  const navigate = useNavigate();
   return (
     <main className="flex-1 flex flex-col md:flex-row  gap-6 px-10 md:px-24 py-10 ">
       <section className="flex flex-col gap-4 items-start">
@@ -56,8 +56,7 @@ function Requirements() {
         </div>
         <button
           className=" rounded-md w-fit  my-10 box-border py-3 px-4 md:px-6  lg:text-lg md:text-base text-sm transition-all duration-250 bg-cyan-600 hover:bg-cyan-500"
-          onClick={()=>navigate('/create-therapist')}
-          
+          onClick={() => navigate("/create-therapist")}
         >
           GET STARTED
         </button>

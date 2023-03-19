@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 function Contact() {
   return (
     <main className="h-full flex-1  flex flex-col  ">
-      {/* Hero section */}
       <section className="flex flex-col gap-4 items-start px-24 py-10">
         <h1 className="text-5xl  font-medium uppercase">
           {" "}
@@ -16,7 +15,6 @@ function Contact() {
           help!
         </p>
       </section>
-      {/* email type section */}
       <section className="flex flex-col md:flex-row gap-8 justify-between items-center pb-20 px-24 ">
         <div>
           <h2 className="text-2xl font-medium">Type of contact</h2>
@@ -24,7 +22,6 @@ function Contact() {
             <li className="w-full pb-3">
               <label htmlFor="list-radio-1" className="w-full py-5 font-medium">
                 <input
-                  //   onChange={(e) => setRadio(e.target.value)}
                   id="list-radio-1"
                   type="radio"
                   name="list-radio"
@@ -41,7 +38,6 @@ function Contact() {
                 className="w-full py-5  font-medium"
               >
                 <input
-                  //   onChange={(e) => setRadio(e.target.value)}
                   id="list-radio-1"
                   type="radio"
                   name="list-radio"
@@ -58,7 +54,6 @@ function Contact() {
                 className="w-full py-5  font-medium"
               >
                 <input
-                  //   onChange={(e) => setRadio(e.target.value)}
                   id="list-radio-1"
                   type="radio"
                   name="list-radio"
@@ -75,7 +70,6 @@ function Contact() {
                 className="w-full py-5  font-medium"
               >
                 <input
-                  //   onChange={(e) => setRadio(e.target.value)}
                   id="list-radio-1"
                   type="radio"
                   name="list-radio"
@@ -92,7 +86,6 @@ function Contact() {
                 className="w-full py-5  font-medium"
               >
                 <input
-                  //   onChange={(e) => setRadio(e.target.value)}
                   id="list-radio-1"
                   type="radio"
                   name="list-radio"
@@ -107,7 +100,6 @@ function Contact() {
                 className="w-full py-5  font-medium"
               >
                 <input
-                  //   onChange={(e) => setRadio(e.target.value)}
                   id="list-radio-1"
                   type="radio"
                   name="list-radio"
@@ -124,7 +116,6 @@ function Contact() {
                 className="w-full py-5  font-medium"
               >
                 <input
-                  //   onChange={(e) => setRadio(e.target.value)}
                   id="list-radio-1"
                   type="radio"
                   name="list-radio"
@@ -139,7 +130,6 @@ function Contact() {
           <img src="./contact.svg" alt="contact" className="w-[75%]" />
         </div>
       </section>
-      {/* Form section */}
       <section className="flex  flex-col md:flex-row gap-8 justify-center md:justify-between items-center pb-20 px-24">
         <form className="min-w-[50%]">
           <div>
@@ -149,7 +139,6 @@ function Contact() {
             >
               Full Name:
               <input
-                // onChange={(e) => setName(e.target.value)}
                 type="text"
                 id="fullname"
                 placeholder="Enter your full name here..."
@@ -168,11 +157,6 @@ function Contact() {
               />
             </label>
           </div>
-          {/* {error && name.length <= 0 ? (
-                <p className="text-red-600">{t('contact.error2')} </p>
-              ) : (
-                ''
-              )} */}
           <div>
             <label
               htmlFor="email"
@@ -180,7 +164,6 @@ function Contact() {
             >
               Email:
               <input
-                // onChange={(e) => setEmail(e.target.value)}
                 type="text"
                 id="email"
                 placeholder="Enter your email address here..."
@@ -199,11 +182,7 @@ function Contact() {
               />
             </label>
           </div>
-          {/* {error && email.length <= 0 ? (
-                <p className=" text-red-600"> {t('contact.error3')} </p>
-              ) : (
-                ''
-              )} */}
+
           <div>
             <label
               htmlFor="message"
@@ -211,7 +190,6 @@ function Contact() {
             >
               Details:
               <textarea
-                // onChange={(e) => setDetails(e.target.value)}
                 id="message"
                 rows="4"
                 className="
@@ -230,15 +208,10 @@ function Contact() {
               />
             </label>
           </div>
-          {/* {error && details <= 0 ? (
-                <p className=" text-red-600">{t('contact.error4')}</p>
-              ) : (
-                ''
-              )} */}
+
           <div className="mt-6">
             <Link>
               <button
-                // onClick={handelSubmit}
                 type="submit"
                 className="
                         lg:text-xl md:text-base text-sm 

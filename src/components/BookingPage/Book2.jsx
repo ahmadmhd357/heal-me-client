@@ -8,10 +8,11 @@ function Book2({ data, setData, setSteps }) {
     setSteps(3);
   }
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className=" w-fit m-auto shadow-[0_4px_12px_rgba(0,0,0,0.12)] p-5 rounded-md flex flex-col gap-5 items-center justify-center">
-      <h1 className="font-medium text-xl">
-        What is your relationship status?
-      </h1>
+    <form
+      onSubmit={handleSubmit(onSubmit)}
+      className=" w-fit m-auto shadow-[0_4px_12px_rgba(0,0,0,0.12)] p-5 rounded-md flex flex-col gap-5 items-center justify-center"
+    >
+      <h1 className="font-medium text-xl">What is your relationship status?</h1>
       <ul className=" w-full mb-20 ">
         <li className="mb-3 w-full  flex">
           <input
@@ -21,7 +22,6 @@ function Book2({ data, setData, setSteps }) {
             name="status"
             value="single"
             className="hidden peer"
-            
           />
           <label
             htmlFor="single"
@@ -38,7 +38,6 @@ function Book2({ data, setData, setSteps }) {
             name="status"
             value="married"
             className="hidden peer"
-            
           />
           <label
             htmlFor="married"
@@ -55,7 +54,6 @@ function Book2({ data, setData, setSteps }) {
             name="status"
             value="divorced"
             className="hidden peer"
-            
           />
           <label
             htmlFor="divorced"
@@ -66,19 +64,16 @@ function Book2({ data, setData, setSteps }) {
         </li>
       </ul>
       <div className="flex justify-between w-full">
-
-      <button
-        className="bg-cyan-400 py-2 uppercase self-start px-4 rounded-md font-medium"
-      >
-        Next
-      </button>
-      <button
-        className="bg-cyan-400 py-2 uppercase self-start px-4 rounded-md font-medium"
-        type="button"
-        onClick={()=>setSteps(1)}
-      >
-        Back
-      </button>
+        <button className="bg-cyan-400 py-2 uppercase self-start px-4 rounded-md font-medium">
+          Next
+        </button>
+        <button
+          className="bg-cyan-400 py-2 uppercase self-start px-4 rounded-md font-medium"
+          type="button"
+          onClick={() => setSteps(1)}
+        >
+          Back
+        </button>
       </div>
     </form>
   );

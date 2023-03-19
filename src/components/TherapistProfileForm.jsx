@@ -21,10 +21,10 @@ function TherapistProfileForm({
           onChange={handleInputChange}
         />
       </div>
-      
+
       <div className="flex flex-col md:flex-row items-center gap- md:gap-4">
         <label htmlFor="liscens" className="font-medium text-xl">
-        Liscens Number
+          Liscens Number
         </label>
         <input
           className="bg-gray-50 border border-SubTexts text-gray-900 sm:text-sm rounded-lg ml-6 focus:ring-primary-600 focus:border-primary-600 block lg:p-2 p-1 lg:w-[28.5em] w-[16em]"
@@ -45,19 +45,16 @@ function TherapistProfileForm({
           value={data?.city}
           onChange={handleInputChange}
         />
-        
       </div>
-      
+
       <div className="flex flex-col md:flex-row justify-center items-center gap-4 mt-10  text-sm">
         <button
-          // disabled={!currentUser}
           type="submit"
           className="rounded-md box-border py-2 px-6 w-fit transition-all duration-250 bg-cyan-600 hover:bg-cyan-500 "
         >
           Save Changes
         </button>
         <button
-          // disabled={!currentUser}
           type="button"
           className="rounded-md box-border p-2 pl-6 pr-6 transition-all duration-250 bg-cyan-600 hover:bg-cyan-500 "
           onClick={handlDelete}
@@ -65,8 +62,6 @@ function TherapistProfileForm({
           Delete The Account
         </button>
         <button
-          // disabled={!currentUser}
-
           className="rounded-md box-border p-2 lg:pl-16 lg:pr-16  pl-8 pr-8 transition-all duration-250 bg-cyan-600 hover:bg-cyan-500 "
           onClick={() => navigate("/")}
         >

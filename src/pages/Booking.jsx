@@ -1,5 +1,4 @@
 import { useState } from "react";
-// import { useForm } from "react-hook-form";
 import Book1 from "../components/BookingPage/Book1";
 import Book2 from "../components/BookingPage/Book2";
 import Book3 from "../components/BookingPage/Book3";
@@ -10,7 +9,6 @@ import Book8 from "../components/BookingPage/Book8";
 import BookTherapist from "../components/BookingPage/BookTherapist";
 
 function Booking() {
-  // const { register, handleSubmit } = useForm();
   const [steps, setSteps] = useState(1);
   const [data, setData] = useState({});
   return (
@@ -44,10 +42,10 @@ function Booking() {
         {steps === 8 && (
           <>
             <h1 className="text-5xl  font-medium uppercase">
-            Submit your appointment
+              Submit your appointment
             </h1>
             <p className="w-[90%] text-lg text-gray-800 font-medium pb-10">
-            Click Submit if you are sure of all your choices.
+              Click Submit if you are sure of all your choices.
             </p>
           </>
         )}
@@ -73,9 +71,7 @@ function Booking() {
       {steps === 7 && (
         <BookTherapist setSteps={setSteps} data={data} setData={setData} />
       )}
-      {steps === 8 && (
-        <Book8 data={data} setSteps={setSteps}/>
-      )}
+      {steps === 8 && <Book8 data={data} setSteps={setSteps} />}
     </main>
   );
 }

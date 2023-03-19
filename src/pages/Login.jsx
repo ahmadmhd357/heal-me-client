@@ -54,13 +54,13 @@ function Login() {
           <div className="flex justify-around py-3 gap-8">
             <button
               type="submit"
-              className="bg-[#2DD3E3] font-medium text-2xl px-10 py-2 rounded-md shadow-[0px_7px_20px_rgba(0,0,0,0.2)]"
+              className="bg-[#2DD3E3] hover:bg-cyan-500 font-medium text-2xl px-10 py-2 rounded-md shadow-[0px_7px_20px_rgba(0,0,0,0.2)]"
             >
               Login
             </button>
             <button
               type="button"
-              className="broder-solid border-2 border-[#2DD3E3] font-medium text-2xl px-10 py-2 rounded-md"
+              className="broder-solid border-2 border-[#2DD3E3] hover:bg-cyan-500 font-medium text-2xl px-10 py-2 rounded-md"
               onClick={() => navigate("/signup")}
             >
               Signup

@@ -27,7 +27,6 @@ function CrediCard() {
         <button
           className=" rounded-md box-border p-2 lg:pl-6 lg:pr-6 lg:text-lg md:text-base text-sm transition-all duration-250 bg-cyan-600 hover:bg-cyan-500"
           type="button"
-          // onClick={() => deleteCardFirebase(doc.id)}
         >
           Delete Card -
         </button>

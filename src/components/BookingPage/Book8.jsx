@@ -3,18 +3,20 @@ import { useDispatch, useSelector } from "react-redux";
 import { getUser, selectUser } from "../../features/users/usersSlice";
 import newRequest from "../../utils/newRequest";
 
-function Book8({ data,setSteps }) {
+function Book8({ data, setSteps }) {
   const { currentUser } = useSelector(selectUser);
   const dispatch = useDispatch();
-  
+
   const onSubmit = async () => {
     try {
-      const res = await newRequest.put('/users/book',{id:currentUser._id, appointment:data})
-    //  const res = await newRequest.get('/users/user',{ email:currentUser.email} )
-     dispatch(getUser(res.data));
-     alert('success')
+      const res = await newRequest.put("/users/book", {
+        id: currentUser._id,
+        appointment: data,
+      });
+      dispatch(getUser(res.data));
+      alert("success");
     } catch (error) {
-      alert(error.response.data)
+      alert(error.response.data);
     }
   };
   return (
@@ -24,24 +26,22 @@ function Book8({ data,setSteps }) {
       <p className="w-[90%] text-lg text-gray-800 font-medium">
         Please be aware that this action will cost you a ticket!
       </p>
-       <div className="flex justify-between w-full">
+      <div className="flex justify-between w-full">
+        <button
+          className="bg-cyan-400 py-2 uppercase  px-4 rounded-md font-medium"
+          onClick={onSubmit}
+        >
+          submit
+        </button>
 
-      <button
-        className="bg-cyan-400 py-2 uppercase  px-4 rounded-md font-medium"
-        onClick={onSubmit}
-      >
-        submit
-      </button>
-      
-      <button
-        className="bg-cyan-400 py-2 uppercase self-start px-4 rounded-md font-medium"
-        type="button"
-        onClick={()=>setSteps(7)}
-      >
-        Back
-      </button>
-      
-       </div>
+        <button
+          className="bg-cyan-400 py-2 uppercase self-start px-4 rounded-md font-medium"
+          type="button"
+          onClick={() => setSteps(7)}
+        >
+          Back
+        </button>
+      </div>
     </div>
   );
 }

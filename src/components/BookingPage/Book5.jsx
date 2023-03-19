@@ -108,19 +108,16 @@ function Book5({ data, setData, setSteps }) {
         </li>
       </ul>
       <div className="flex justify-between w-full">
-
-      <button
-        className="bg-cyan-400 py-2 uppercase self-start px-4 rounded-md font-medium"
-      >
-        Next
-      </button>
-      <button
-        className="bg-cyan-400 py-2 uppercase self-start px-4 rounded-md font-medium"
-        type="button"
-        onClick={()=>setSteps(4)}
-      >
-        Back
-      </button>
+        <button className="bg-cyan-400 py-2 uppercase self-start px-4 rounded-md font-medium">
+          Next
+        </button>
+        <button
+          className="bg-cyan-400 py-2 uppercase self-start px-4 rounded-md font-medium"
+          type="button"
+          onClick={() => setSteps(4)}
+        >
+          Back
+        </button>
       </div>
     </form>
   );

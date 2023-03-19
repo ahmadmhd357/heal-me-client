@@ -6,21 +6,15 @@ import {
   useStripe,
   useElements,
 } from "@stripe/react-stripe-js";
-import newRequest from "../utils/newRequest";
-import { useDispatch, useSelector } from "react-redux";
-import { selectUser } from "../features/users/usersSlice";
 
 function CheckoutForm() {
   const stripe = useStripe();
   const elements = useElements();
-  
-  
+
   const [message, setMessage] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
-  const {id} = useParams();
-  const tickets = id === '10'? 5 : id === '40'? 25 : id ==='70' ? 50 : 0
-  
-  
+  const { id } = useParams();
+  const tickets = id === "10" ? 5 : id === "40" ? 25 : id === "70" ? 50 : 0;
 
   useEffect(() => {
     if (!stripe) {
@@ -52,13 +46,12 @@ function CheckoutForm() {
       }
     });
   }, [stripe]);
-  
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
+    e.preventDefault();
 
     if (!stripe || !elements) {
-      return 
+      return;
     }
 
     setIsLoading(true);
@@ -70,11 +63,9 @@ function CheckoutForm() {
       },
     });
     if (error.type === "card_error" || error.type === "validation_error") {
-      
-       setMessage(error.message);
+      setMessage(error.message);
     } else {
-      
-       setMessage("An unexpected error occurred.");
+      setMessage("An unexpected error occurred.");
     }
     setIsLoading(false);
   };
@@ -103,8 +94,12 @@ function CheckoutForm() {
           )}
         </span>
       </button>
-      {/* Show any error or success messages */}
-      {message && <div id="payment-message" className="text-red-600 font-medium">{message}</div>}
+
+      {message && (
+        <div id="payment-message" className="text-red-600 font-medium">
+          {message}
+        </div>
+      )}
     </form>
   );
 }

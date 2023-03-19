@@ -50,9 +50,7 @@ function Book1({ data, setData, setSteps }) {
           </label>
         </li>
       </ul>
-      <button
-        className="bg-cyan-400 py-2 uppercase self-start px-4 rounded-md font-medium"
-      >
+      <button className="bg-cyan-400 py-2 uppercase self-start px-4 rounded-md font-medium">
         Next
       </button>
     </form>

@@ -11,12 +11,14 @@ const stripePromise = loadStripe(
 
 function Pay() {
   const [clientSecret, setClientSecret] = useState("");
-  const {id} = useParams()
+  const { id } = useParams();
 
   useEffect(() => {
     const makeRequest = async () => {
       try {
-        const res = await newRequest.post("purchase/create-payment-intent",{price:Number(id)});
+        const res = await newRequest.post("purchase/create-payment-intent", {
+          price: Number(id),
+        });
         setClientSecret(res.data.clientSecret);
       } catch (error) {
         alert(error);
@@ -28,14 +30,12 @@ function Pay() {
   const appearance = {
     theme: "flat",
     variables: {
-        
-        colorText: '#30313d',
-        colorDanger: '#df1b41',
-        fontFamily: 'Ideal Sans, system-ui, sans-serif',
-        spacingUnit: '5px',
-        borderRadius: '4px',
-        
-      }
+      colorText: "#30313d",
+      colorDanger: "#df1b41",
+      fontFamily: "Ideal Sans, system-ui, sans-serif",
+      spacingUnit: "5px",
+      borderRadius: "4px",
+    },
   };
   const options = {
     clientSecret,

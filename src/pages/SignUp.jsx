@@ -12,7 +12,7 @@ function SignUp() {
     confEmail: "",
     password: "",
     confPassword: "",
-    birth:""
+    birth: "",
   });
 
   const onChange = (e) => {
@@ -37,9 +37,8 @@ function SignUp() {
       } catch (error) {
         alert(error.response.data);
       }
-    }
-    else{
-      alert('please make sure to write the email and password correctly')
+    } else {
+      alert("please make sure to write the email and password correctly");
     }
   };
 

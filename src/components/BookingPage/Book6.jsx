@@ -11,7 +11,7 @@ function Book6({ data, setData, setSteps }) {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className=" w-fit m-auto shadow-[0_4px_12px_rgba(0,0,0,0.12)] p-5 rounded-md "
+      className=" w-[90%] m-auto shadow-[0_4px_12px_rgba(0,0,0,0.12)] p-5 rounded-md "
     >
       <textarea
         {...register("desc")}
@@ -20,9 +20,7 @@ function Book6({ data, setData, setSteps }) {
         placeholder="write your descreption..."
       />
       <div className="flex justify-between w-full">
-        <button
-          className="bg-cyan-400 py-2 uppercase self-start px-4 rounded-md font-medium"
-        >
+        <button className="bg-cyan-400 py-2 uppercase self-start px-4 rounded-md font-medium">
           Next
         </button>
         <button

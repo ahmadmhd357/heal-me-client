@@ -5,8 +5,8 @@ import { getUser, selectUser } from "../features/users/usersSlice";
 import newRequest from "../utils/newRequest";
 
 function ThanksPage() {
-  const navigate = useNavigate()
-  const {tickets} = useParams()
+  const navigate = useNavigate();
+  const { tickets } = useParams();
   const { currentUser } = useSelector(selectUser);
   const dispatch = useDispatch();
 
@@ -14,34 +14,28 @@ function ThanksPage() {
     try {
       const res = await newRequest.put(`purchase/update`, {
         id: currentUser._id,
-        tickets: tickets
+        tickets: tickets,
       });
-      
-      
+
       dispatch(getUser(res.data));
-      
-      setTimeout(()=>{
-         navigate('/')
-      },3000)
-      
+
+      setTimeout(() => {
+        navigate("/");
+      }, 2000);
     } catch (error) {
       alert(error);
     }
-  }
+  };
   useEffect(() => {
-    creatReq()
-  }, [])
-  
-
+    creatReq();
+  }, []);
 
   return (
     <main className="flex-1 flex flex-col  gap-6 px-10 md:px-24 py-10 ">
       <h1 className="text-5xl  font-medium uppercase mb-6">THANK YOU!</h1>
       <p className="w-[80%] text-lg text-gray-600 font-medium pb-10">
-        
-      {tickets} Tickets added to your account successfully
+        {tickets} Tickets added to your account successfully
       </p>
-      
     </main>
   );
 }

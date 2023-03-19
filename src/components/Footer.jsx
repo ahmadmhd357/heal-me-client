@@ -19,7 +19,6 @@ function Footer() {
       name: "Contact Us",
       path: "/contactus",
     },
-    
   ];
 
   return (
@@ -44,10 +43,11 @@ function Footer() {
         <div className="flex gap-8">
           {links.map((link) => (
             <Link
-              className={location?.pathname === link.path
-              ? "text-slate-900 font-semibold text-lg"
-              : "text-gray-400 font-semibold text-lg"
-          }
+              className={
+                location?.pathname === link.path
+                  ? "text-slate-900 font-semibold text-lg"
+                  : "text-gray-400 font-semibold text-lg"
+              }
               key={link.name}
               to={link.path}
             >

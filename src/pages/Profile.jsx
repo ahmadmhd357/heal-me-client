@@ -132,11 +132,12 @@ function Profile() {
             handlDelete={handlDelete}
           />
         )}
-        <h1 className="font-bold uppercase m-auto text-5xl">Appointments  {currentUser?.isTherapist ? '' : ' & Tickets'}</h1>
+        <h1 className="font-bold uppercase m-auto text-5xl">
+          Appointments {currentUser?.isTherapist ? "" : " & Tickets"}
+        </h1>
         <div className="flex justify-around items-center gap-10  m-auto ">
           <div className="flex flex-col gap-2 mt-10 text-sm self-end ">
             <button
-              // disabled={!currentUser}
               type="button"
               onClick={() => navigate("/appointments")}
               className="rounded-md box-border p-2 px-6 uppercase  transition-all duration-250 bg-cyan-600 hover:bg-cyan-500 "
@@ -144,19 +145,22 @@ function Profile() {
               appointments
             </button>
           </div>
-         { currentUser?.isTherapist ? <div> </div> : <div className="flex flex-col  gap-2 mt-10  text-sm">
-            <span className="font-medium text-xl">
-              {currentUser?.tickets} Tickets Remaining
-            </span>
-            <button
-              // disabled={!currentUser}
-              type="button"
-              onClick={() => navigate("/tickets")}
-              className="rounded-md box-border p-2 pl-6 pr-6 transition-all duration-250 bg-cyan-600 hover:bg-cyan-500 "
-            >
-              BUY TICKETS
-            </button>
-          </div>}
+          {currentUser?.isTherapist ? (
+            <div> </div>
+          ) : (
+            <div className="flex flex-col  gap-2 mt-10  text-sm">
+              <span className="font-medium text-xl">
+                {currentUser?.tickets} Tickets Remaining
+              </span>
+              <button
+                type="button"
+                onClick={() => navigate("/tickets")}
+                className="rounded-md box-border p-2 pl-6 pr-6 transition-all duration-250 bg-cyan-600 hover:bg-cyan-500 "
+              >
+                BUY TICKETS
+              </button>
+            </div>
+          )}
         </div>
       </section>
     </main>
