@@ -35,7 +35,7 @@ function SignUp() {
         alert("new user has been created");
         navigate("/login");
       } catch (error) {
-        alert(error.message);
+        alert(error.response.data);
       }
     }
     else{
